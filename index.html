@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nirakh Patel | IT Diploma Graduate &amp; Aspiring CSE Engineer</title>
+<meta name="description" content="Portfolio of Nirakh Patel: IT diploma graduate moving into B.Tech Computer Science. Python projects, data structures and full stack web development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5f8; --surface:#ffffff; --ink:#13202c; --muted:#546576;
+  --line:#d5dde5; --accent:#1c4fd7; --accent-ink:#ffffff; --chip:#e4ebf3;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1720; --surface:#16212d; --ink:#e8eef4; --muted:#9bacbd;
+        --line:#26364a; --accent:#6f95ff; --accent-ink:#0f1720; --chip:#1d2b3b;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+header.top{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.brand{font:800 1.15rem var(--head);color:var(--ink);text-decoration:none}
+nav a{margin-left:22px;color:var(--muted);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:80px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:center}
+h1{font:800 clamp(2.6rem,6vw,4.6rem)/1.02 var(--head);letter-spacing:-.025em;margin:0 0 22px}
+.lead{font-size:1.25rem;color:var(--muted);max-width:34em;margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+
+.photo{aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--chip);border:1px solid var(--line);display:grid;place-items:center}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .initials{font:800 5rem var(--head);color:var(--accent)}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:700 1.9rem/1.2 var(--head);letter-spacing:-.01em;margin:0 0 28px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p{margin:0 0 16px;max-width:38em}
+
+.skills h3{font:700 1.05rem var(--head);margin:0 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
+.chips li{background:var(--chip);padding:6px 14px;border-radius:999px;font-weight:600;font-size:.95rem}
+
+.projects{display:flex;flex-direction:column}
+.project{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;padding:28px 0;border-top:1px solid var(--line)}
+.project:first-child{border-top:0;padding-top:0}
+.project h3{font:700 1.35rem var(--head);margin:0 0 8px}
+.project .tech{color:var(--muted);font-size:.95rem;margin:0}
+.project p{margin:0 0 12px}
+.project ul{margin:0 0 14px;padding-left:20px;color:var(--muted)}
+.links a{font-weight:600;margin-right:18px}
+
+.timeline{list-style:none;margin:0;padding:0 0 0 26px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 28px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-34px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.timeline li.next::before{background:var(--bg);border:3px solid var(--accent)}
+.timeline h3{font:700 1.15rem var(--head);margin:0 0 2px}
+.timeline p{margin:0;color:var(--muted)}
+
+.contact p{max-width:34em;color:var(--muted);margin:0 0 20px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.95rem}
+
+@media (max-width:820px){
+  .hero{padding:48px 0}
+  .hero .wrap,.two,.project{grid-template-columns:1fr}
+  .photo{max-width:280px;order:-1}
+  nav a{margin-left:14px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Nirakh Patel</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>I’m Nirakh Patel.</h1>
+        <p class="lead">IT diploma graduate heading into a B.Tech in Computer Science. I build small Python tools and I’m learning computer science, data structures, and full stack web development.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn ghost" href="https://github.com/patelnirakh">GitHub profile</a>
+        </div>
+      </div>
+      <div class="photo" id="photo">
+        <!-- Put your photo in this folder as photo.jpg and it will show here -->
+        <img src="photo.jpg" alt="Portrait of Nirakh Patel" onerror="this.parentNode.innerHTML='<span class=&quot;initials&quot; aria-label=&quot;Nirakh Patel&quot;>NP</span>'">
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap two">
+      <div>
+        <h2>About me</h2>
+        <p>I completed a diploma in Information Technology and I’m now moving into a B.Tech in Computer Science through the Diploma to Degree (D2D) lateral entry route.</p>
+        <p>I learn best by building. Each project here started as a small idea that I turned into working code and put on GitHub.</p>
+        <p>My main interests are computer science, data structures, and full stack web development.</p>
+      </div>
+      <div class="skills">
+        <h2>Skills</h2>
+        <h3>Working with</h3>
+        <ul class="chips">
+          <li>Python</li><li>HTML &amp; CSS</li><li>Git &amp; GitHub</li><li>Command line</li>
+        </ul>
+        <h3>Learning</h3>
+        <ul class="chips">
+          <li>Computer science (CSE)</li><li>Data structures</li><li>Full stack web development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div>
+            <h3>Password Strength Checker</h3>
+            <p class="tech">Python, command line</p>
+          </div>
+          <div>
+            <p>A CLI tool that rates a password as weak, medium, or strong and tells you what to fix.</p>
+            <ul>
+              <li>Scores length, letter case, numbers, and symbols</li>
+              <li>Flags common passwords and repeated characters</li>
+              <li>Hides the password while you type</li>
+            </ul>
+            <div class="links"><a href="https://github.com/patelnirakh/password-strength-checker">View on GitHub</a></div>
+          </div>
+        </article>
+        <article class="project">
+          <div>
+            <h3>Expense Tracker CLI</h3>
+            <p class="tech">Python, CSV</p>
+          </div>
+          <div>
+            <p>A command-line tracker for daily spending, saved to a CSV file you can open in Excel.</p>
+            <ul>
+              <li>Add expenses with a category, amount, and note</li>
+              <li>List every entry with its date</li>
+              <li>Show totals per category</li>
+            </ul>
+            <div class="links"><a href="https://github.com/patelnirakh/expense-tracker-cli">View on GitHub</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap two">
+      <div>
+        <h2>Education</h2>
+        <ol class="timeline">
+          <li>
+            <h3>Diploma in Information Technology</h3>
+            <p>Completed</p>
+          </li>
+          <li class="next">
+            <h3>B.Tech in Computer Science</h3>
+            <p>Next step, through D2D lateral entry</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Email me or see my work on GitHub.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:patelnirakh001@gmail.com">patelnirakh001@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/patelnirakh">github.com/patelnirakh</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Nirakh Patel</div>
+</footer>
+</body>
+</html>
